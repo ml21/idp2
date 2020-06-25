@@ -1,9 +1,40 @@
 # [Secure Software Design Specialization](https://www.coursera.org/specializations/secure-software-design#courses)
+<!-- TOC -->
 
+- [Course 1. Software Design as an Element of the Software Development Lifecycle](#course-1-software-design-as-an-element-of-the-software-development-lifecycle)
+    - [Week 1](#week-1)
+        - [Thinking](#thinking)
+    - [Week 2](#week-2)
+        - [Software Development Life Cycle](#software-development-life-cycle)
+            - [Waterfall (Каскадная модель)](#waterfall-%D0%BA%D0%B0%D1%81%D0%BA%D0%B0%D0%B4%D0%BD%D0%B0%D1%8F-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C)
+            - [V-Shape Waterfall (V-модель, разработка через тестиование))](#v-shape-waterfall-v-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-%D1%82%D0%B5%D1%81%D1%82%D0%B8%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)
+            - [Waterfall with feedback (каскадная модель с обратной связью)](#waterfall-with-feedback-%D0%BA%D0%B0%D1%81%D0%BA%D0%B0%D0%B4%D0%BD%D0%B0%D1%8F-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C-%D1%81-%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%BE%D0%B9-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C%D1%8E)
+            - [Spiral (спиральная модель)](#spiral-%D1%81%D0%BF%D0%B8%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C)
+            - [XP (экстремальное программирование)](#xp-%D1%8D%D0%BA%D1%81%D1%82%D1%80%D0%B5%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)
+            - [Agile (гибкая методология разработки)](#agile-%D0%B3%D0%B8%D0%B1%D0%BA%D0%B0%D1%8F-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8)
+                - [Dynamic systems development method (метод разработки динамических систем)](#dynamic-systems-development-method-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8-%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC)
+            - [Таблица: момент определения требований к системе в описанных методологиях](#%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0-%D0%BC%D0%BE%D0%BC%D0%B5%D0%BD%D1%82-%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9-%D0%BA-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B5-%D0%B2-%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%D1%85)
+            - [Выводы](#%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4%D1%8B)
+        - [What happens in Design](#what-happens-in-design)
+            - [Additional Resource](#additional-resource)
+    - [Week 3](#week-3)
+        - [Design in different SDLCs](#design-in-different-sdlcs)
+            - [Дизайн на примере разработки по каскадной модели](#%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B5-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BA%D0%B0%D1%81%D0%BA%D0%B0%D0%B4%D0%BD%D0%BE%D0%B9-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8)
+            - [Дизайн в Agile модели разработки](#%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%B2-agile-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8)
+            - [Additional Resource](#additional-resource)
+        - [Interfacing with requirements and implementation](#interfacing-with-requirements-and-implementation)
+            - [Additional Resource](#additional-resource)
+    - [Week 4](#week-4)
+        - [The role of architecture in design](#the-role-of-architecture-in-design)
+            - [Additional Resource](#additional-resource)
+        - [Permitted activities that can cause problems](#permitted-activities-that-can-cause-problems)
+
+<!-- /TOC -->
 
 ## Course 1. [Software Design as an Element of the Software Development Lifecycle](https://www.coursera.org/learn/software-design-development-life-cycle/home/welcome)
 
 ### Week 1
+
 #### [Thinking](https://www.coursera.org/learn/software-design-development-life-cycle/lecture/C34KA/thinking)
 Лектор привел пример из своего опыта: он подготавливал речи для высокопоставленного офицера и в то время была наслуху концепция всеобщего качества ([TQM](https://ru.wikipedia.org/wiki/%D0%92%D1%81%D0%B5%D0%BE%D0%B1%D1%89%D0%B5%D0%B5_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE%D0%BC)), которую сформулировали на японских промышленных предприятиях. Одной из характерных черт этой концепции является пошагово описанные и регламентирванные процессы, выполнять которые могут любые подготовленные квалифицированные рабочие и на выходе будет одинаково качественный результат.
 
@@ -12,6 +43,7 @@
 Далее декларируется тот факт, что невозможно придумать список поверки системы, выполнение которой гарантирует 100% защищенность этой системы. Создание устойчивых к атакам систем требует способности адаптироваться, требует умения думать.
 
 ### Week 2
+
 #### [Software Development Life Cycle](https://www.coursera.org/learn/software-design-development-life-cycle/lecture/9uGpf/whats-an-sdlc)
 
 - это множество стадий, через которые проект проходит на протяжении своей жизни.
@@ -128,7 +160,13 @@
 ***
 *Мои заметки*
 
-Не очень понятно, почему лектор обсуждает Agile и XP на одном уровне. У меня всегда было примерно такое представление: Agile это класс (технологии разработки ПО), общая сущность, а XP же это инстанс этого класа.
+- Не очень понятно, почему лектор обсуждает Agile и XP на одном уровне. У меня всегда было примерно такое представление: Agile это класс (технологии разработки ПО), общая сущность, а XP же это инстанс этого класа.
+
+- не упомянута интересная [методология чистой комнаты](https://ru.wikipedia.org/wiki/Cleanroom_Software_Engineering)
+Как раз она может поспорить с утверждением лектора о том, что невозможно создать чек лист, который гарантирует безопасность и надежность системы
+
+![Методология чистой комнаты](content/cleanroom.jpg "Методология чистой комнаты")
+
 ***
 
 #### [What happens in Design](https://www.coursera.org/learn/software-design-development-life-cycle/lecture/4mUqd/what-happens-in-design)

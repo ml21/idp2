@@ -1,5 +1,39 @@
 # [Secure Software Design Specialization](https://www.coursera.org/specializations/secure-software-design#courses)
-<!-- TOC -->autoauto- [Course 1. [Software Design as an Element of the Software Development Lifecycle](https://www.coursera.org/learn/software-design-development-life-cycle/home/welcome)](#course-1-software-design-as-an-element-of-the-software-development-lifecyclehttpswwwcourseraorglearnsoftware-design-development-life-cyclehomewelcome)auto    - [Week 1](#week-1)auto        - [[Thinking](https://www.coursera.org/learn/software-design-development-life-cycle/lecture/C34KA/thinking)](#thinkinghttpswwwcourseraorglearnsoftware-design-development-life-cyclelecturec34kathinking)auto    - [Week 2](#week-2)auto        - [[Software Development Life Cycle](https://www.coursera.org/learn/software-design-development-life-cycle/lecture/9uGpf/whats-an-sdlc)](#software-development-life-cyclehttpswwwcourseraorglearnsoftware-design-development-life-cyclelecture9ugpfwhats-an-sdlc)auto            - [Waterfall (Каскадная модель)](#waterfall-каскадная-модель)auto            - [[V-Shape Waterfall (V-модель, разработка через тестиование)](https://en.wikipedia.org/wiki/V-Model_(software_development))](#v-shape-waterfall-v-модель-разработка-через-тестиованиеhttpsenwikipediaorgwikiv-model_software_development)auto            - [Waterfall with feedback (каскадная модель с обратной связью)](#waterfall-with-feedback-каскадная-модель-с-обратной-связью)auto            - [[Spiral (спиральная модель)](https://ru.wikipedia.org/wiki/Спиральная_модель)](#spiral-спиральная-модельhttpsruwikipediaorgwiki_)auto            - [[XP (экстремальное программирование)](https://ru.wikipedia.org/wiki/Экстремальное_программирование)](#xp-экстремальное-программированиеhttpsruwikipediaorgwiki_)auto            - [[Agile (гибкая методология разработки)](https://ru.wikipedia.org/wiki/Гибкая_методология_разработки)](#agile-гибкая-методология-разработкиhttpsruwikipediaorgwiki__)auto                - [[Dynamic systems development method (метод разработки динамических систем)](https://ru.wikipedia.org/wiki/DSDM)](#dynamic-systems-development-method-метод-разработки-динамических-системhttpsruwikipediaorgwikidsdm)auto            - [Таблица: момент определения требований к системе в описанных методологиях](#таблица-момент-определения-требований-к-системе-в-описанных-методологиях)auto            - [Выводы](#выводы)auto        - [[What happens in Design](https://www.coursera.org/learn/software-design-development-life-cycle/lecture/4mUqd/what-happens-in-design)](#what-happens-in-designhttpswwwcourseraorglearnsoftware-design-development-life-cyclelecture4muqdwhat-happens-in-design)auto            - [[Additional Resource](https://en.wikipedia.org/wiki/Software_design)](#additional-resourcehttpsenwikipediaorgwikisoftware_design)auto    - [Week 3](#week-3)auto        - [Design in different SDLCs](#design-in-different-sdlcs)auto            - [Дизайн на примере разработки по каскадной модели](#дизайн-на-примере-разработки-по-каскадной-модели)auto            - [Дизайн в Agile модели разработки](#дизайн-в-agile-модели-разработки)auto            - [[Additional Resource](http://wiki.c2.com/?WhatIsSoftwareDesign)](#additional-resourcehttpwikic2comwhatissoftwaredesign)auto        - [Interfacing with requirements and implementation](#interfacing-with-requirements-and-implementation)auto            - [Additional Resource](#additional-resource)auto    - [Week 4](#week-4)auto        - [The role of architecture in design](#the-role-of-architecture-in-design)auto            - [Additional Resource](#additional-resource-1)auto        - [Permitted activities that can cause problems](#permitted-activities-that-can-cause-problems)autoauto<!-- /TOC -->
+
+<!-- TOC -->
+
+- [Course 1. Software Design as an Element of the Software Development Lifecycle](#course-1-software-design-as-an-element-of-the-software-development-lifecycle)
+    - [Week 1](#week-1)
+        - [Thinking](#thinking)
+    - [Week 2](#week-2)
+        - [Software Development Life Cycle](#software-development-life-cycle)
+            - [Waterfall (Каскадная модель)](#waterfall-%D0%BA%D0%B0%D1%81%D0%BA%D0%B0%D0%B4%D0%BD%D0%B0%D1%8F-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C)
+            - [V-Shape Waterfall (V-модель, разработка через тестиование))](#v-shape-waterfall-v-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-%D1%82%D0%B5%D1%81%D1%82%D0%B8%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)
+            - [Waterfall with feedback (каскадная модель с обратной связью)](#waterfall-with-feedback-%D0%BA%D0%B0%D1%81%D0%BA%D0%B0%D0%B4%D0%BD%D0%B0%D1%8F-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C-%D1%81-%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%BD%D0%BE%D0%B9-%D1%81%D0%B2%D1%8F%D0%B7%D1%8C%D1%8E)
+            - [Spiral (спиральная модель)](#spiral-%D1%81%D0%BF%D0%B8%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C)
+            - [XP (экстремальное программирование)](#xp-%D1%8D%D0%BA%D1%81%D1%82%D1%80%D0%B5%D0%BC%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)
+            - [Agile (гибкая методология разработки)](#agile-%D0%B3%D0%B8%D0%B1%D0%BA%D0%B0%D1%8F-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8)
+                - [Dynamic systems development method (метод разработки динамических систем)](#dynamic-systems-development-method-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8-%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC)
+            - [Таблица: момент определения требований к системе в описанных методологиях](#%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0-%D0%BC%D0%BE%D0%BC%D0%B5%D0%BD%D1%82-%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B9-%D0%BA-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B5-%D0%B2-%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%D1%85)
+            - [Выводы](#%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4%D1%8B)
+        - [What happens in Design](#what-happens-in-design)
+            - [Additional Resource](#additional-resource)
+    - [Week 3](#week-3)
+        - [Design in different SDLCs](#design-in-different-sdlcs)
+            - [Дизайн на примере разработки по каскадной модели](#%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%B5-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8-%D0%BF%D0%BE-%D0%BA%D0%B0%D1%81%D0%BA%D0%B0%D0%B4%D0%BD%D0%BE%D0%B9-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8)
+            - [Дизайн в Agile модели разработки](#%D0%B4%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%B2-agile-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8)
+            - [Additional Resource](#additional-resource)
+        - [Interfacing with requirements and implementation](#interfacing-with-requirements-and-implementation)
+            - [Additional Resource](#additional-resource)
+    - [Week 4](#week-4)
+        - [The role of architecture in design](#the-role-of-architecture-in-design)
+            - [Additional Resource](#additional-resource)
+        - [Permitted activities that can cause problems](#permitted-activities-that-can-cause-problems)
+- [Course 2. Software Design as an Abstraction](#course-2-software-design-as-an-abstraction)
+    - [Intro](#intro)
+        - [Вывод](#%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4)
+
+<!-- /TOC -->
 
 ## Course 1. [Software Design as an Element of the Software Development Lifecycle](https://www.coursera.org/learn/software-design-development-life-cycle/home/welcome)
 

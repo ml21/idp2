@@ -52,6 +52,10 @@
                 - [1. Learn about the First Normal Form and Database Design](#1-learn-about-the-first-normal-form-and-database-design)
                 - [2. Database - Second Normal Form (2NF)](#2-database---second-normal-form-2nf)
         - [Database design 3 and Overall Database Security](#database-design-3-and-overall-database-security)
+            - [Additional Resource](#additional-resource)
+                - [1. Third normal form (3NF)](#1-third-normal-form-3nf)
+                - [2. Обеспечение безопасности SQL Server](#2-%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8-sql-server)
+                - [3. Раздел о безопасности на сайте Oracle](#3-%D1%80%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB-%D0%BE-%D0%B1%D0%B5%D0%B7%D0%BE%D0%BF%D0%B0%D1%81%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BD%D0%B0-%D1%81%D0%B0%D0%B9%D1%82%D0%B5-oracle)
 
 <!-- /TOC -->
 
@@ -638,7 +642,8 @@ Backend не имеет пользователя - только клиента.
 
 ![Пользователи, получающие данные БД через приложение](content/db_security_2.jpg "Данные через приложение")
 
-Некторый инструменты БД, которые могут помочь минимизировать угрозы: триггеры, сохранненные процедуры, представления(views).
+Некоторые инструменты БД, которые могут помочь минимизировать угрозы: триггеры, сохранненные процедуры, представления(views).
+
 Минус сохраненных процедур - хотя это и вид программного кода, часто он может выпадать из общих стандартов работы с кодом в команде.
 Сохраненные процедуры могут быть изменены на запущенной системе, поэтому стоит уделить большое вниманию их тестированию и версионированию.
 
@@ -646,3 +651,12 @@ Backend не имеет пользователя - только клиента.
 
 ![Правила безопасности при развертывании БД](content/db_security_3.jpg "Правила безопасности при развертывании БД")
 ![Вариант организации сетевого взаимодействия](content/db_security_4.jpg "Вариант организации сетевого взаимодействия")
+
+##### Additional Resource
+
+###### [1. Third normal form (3NF)](http://www.gitta.info/LogicModelin/en/html/DataConsiten_Norm3NF.html)
+
+###### [2. Обеспечение безопасности SQL Server](https://docs.microsoft.com/ru-ru/sql/relational-databases/security/securing-sql-server?view=sql-server-ver15)
+Отличный раздел документации Microsoft по безопасности SQL Server
+
+###### [3. Раздел о безопасности на сайте Oracle](https://www.oracle.com/database/technologies/security.html)
